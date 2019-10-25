@@ -35,3 +35,21 @@
 # test_4
 # 1
 # 2
+
+def print_result(func):
+    def decorated_func(data):
+        result = func(data)
+        print(func.__name__)
+
+        if type(result) is list:
+            print(*result, sep='\n')
+
+        elif type(result) is dict:
+            for key, value in result.items():
+                print('{}={}'.format(key, value))
+        else:
+            print(result)
+
+        return result
+
+    return decorated_func

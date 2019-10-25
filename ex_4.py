@@ -1,5 +1,6 @@
 from librip.decorators import print_result
 
+
 # Необходимо верно реализовать print_result
 # и задание будет выполнено
 
@@ -15,7 +16,7 @@ def test_2():
 
 @print_result
 def test_3():
-    return {'a': 1, 'b': 2}
+    return {'a': 1, 'b': 2, 'c': 3}
 
 
 @print_result
